@@ -2,6 +2,8 @@
 ---
 https://github.com/dimsemenov/PhotoSwipe
 
+http://photoswipe.com/documentation/api.html
+
 ```js
 require([
   'path/to/photoswipe.js',
