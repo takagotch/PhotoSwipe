@@ -175,6 +175,8 @@ initPhotoSwipeFromDOM('.my-gallery');
 ```
 
 ```
+npm install photswipe
+bower install photoswipe
 ```
 
 ```
