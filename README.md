@@ -180,6 +180,118 @@ bower install photoswipe
 ```
 
 ```js
+var photoswipeInstance = new PhotoSwipe( /* ... */ );
+
+var pswp = new PhotoSwip( /* ... */ );
+
+pswp.init();
+
+pswp.goTo(index);
+
+pswp.next();
+
+pswp.prev();
+
+pswp.updateSize(force);
+
+pswp.close();
+
+pswp.destroy()
+  // pswp.zoomTo(2, [x:pswp.viewportSize.x/2,y:pswp.viewportSize.y/2], 2000, false, function(now) {
+  // });
+
+pswp.zoomTo(destroyLevel, centerPoint, speed, easingFn, updateFn);
+
+pswp.applyZoomPan(zoomLevel, panX, panY);
+pswp.currItem
+pswp.items
+pswp.framework
+pspw.ui
+pswp.bg
+pswp.container
+pswp.options
+pswp.getCurrentIndex();
+pswp.options.getNumItemsFn()
+pswp.getZoomLevel();
+pswp.isDragging();
+pswp.isZooming();
+pswp.isMainScrollAnimating();
+
+
+var pswp = new PhotoSwipe(/* ... */);
+
+pswp.listen('helloWorld', function(name) {
+  alert('Name is: ' + name);
+});
+
+pswp.shout('helloWorld', 'John');
+
+
+
+pswp.listen('beforeChange', function() { });
+
+pswp.listen('afterChage', function() { });
+
+pswp.listen('imageLoadComplete', function(index, item) {
+});
+
+pswp.listen('resize', function() { });
+
+pswp.listen('gettingData', function(index, item) {
+
+  if ( something) {
+    item.src = item.something;
+  } else {
+    item.src = item.somethingElse;
+  }
+});
+
+pswp.listen('mouseUsed', function() {  });
+
+pwsp.listen('initialzoomIn', function() { });
+
+pwsp.listen('initialZoomInEndd', function() { });
+
+pswp.listen('initialZoomOut', function() { });
+
+pswp.listen('initailZoomOutEnd', function() { });
+
+pswp.listen('parseVericalMargin', function(item) {
+  var gap = item.vGap;
+  
+  gap.top = 50;
+  gap.bottom = 100;
+});
+
+psqp.listen('close', function() { });
+
+pswp.listen('unbindEvents', function() { });
+
+pswp.listen('destroy', function() { });
+
+pswp.listen('updateScrollOffset', function(_offset) {
+  var r = gallery.template.getBoundingClientRect();
+  _offset.x += r.left;
+  _offset.y += r.top;
+});
+
+pswp.framework.bind(pswp.scrollWrap, 'pswpTap', function(e) {
+  console.log('tap', e, e.detail);
+  // e.detail.origEvent
+  // e.detail.target
+  // e.detail.releasePoint
+  // e.detail.pointerType
+});
+
+pswp.listen('preventDragEvent', function(e, isDown, preventObj) {
+  // e - original event
+  preventObj.prevent = true;
+});
+
+pswp.listen('shareLinkClick', function(e, target) {
+  //
+});
+
 pswp.items.push({
   src: "path/to/image.jpg",
   w:1200,
