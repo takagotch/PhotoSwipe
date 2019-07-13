@@ -174,11 +174,19 @@ var initPhotoSwipeFromDOM = function(gallerySelector){
 initPhotoSwipeFromDOM('.my-gallery');
 ```
 
-```
+```sh
 npm install photswipe
 bower install photoswipe
 ```
 
-```
+```js
+pswp.items.push({
+  src: "path/to/image.jpg",
+  w:1200,
+  h:500
+});
+
+pswp.invalidateCurrItems();
+pswp.updateSize(true);
 ```
 
